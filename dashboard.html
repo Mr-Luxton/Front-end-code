@@ -1,0 +1,30 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Storage</title>
+</head>
+<body>
+    <h2>Cloud Storage</h2>
+    <div id="fileList"></div>
+    <script>
+        // Example: Predefined file links for simplicity
+        const files = [
+            { name: "Example File 1", url: "https://example.com/file1.pdf" },
+            { name: "Example Image", url: "https://example.com/image.png" }
+        ];
+
+        const fileList = document.getElementById('fileList');
+        files.forEach(file => {
+            const fileLink = document.createElement('a');
+            fileLink.href = file.url;
+            fileLink.textContent = file.name;
+            fileLink.target = '_blank';
+            fileList.appendChild(fileLink);
+            fileList.appendChild(document.createElement('br'));
+        });
+    </script>
+</body>
+</html>
